@@ -40,6 +40,47 @@ function expect(target) {
 // ????????
 // ????????
 
+var Dog = function(options) {
+  var options = options || {};
+  this.color = options.color;
+
+  if(options.hungry == false) {
+    this.hungry = options.hungry
+  }
+  else {
+    this.hungry = true;
+  }
+
+  this.status = options.status || 'normal';
+};
+
+
+var Human = function(options) {
+  var options = options || {};
+
+  if(options.cool){
+    this.cool = true;
+  }
+  else{
+    this.cool = false;
+  }
+  
+  this.pet = function(dog){
+    dog.status = 'happy';
+  };
+
+  this.feed = function(dog){
+    dog.hungry = false;
+  };
+
+
+};
+
+
+
+
+
+
 
 //        __
 //   ____/ /___  ____ ______
