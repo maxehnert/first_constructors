@@ -25,7 +25,7 @@ function expect(target) {
         return false;
       }
     }
-  }
+  };
 }
 
 //                          __                  __
@@ -42,14 +42,14 @@ function expect(target) {
 //
 
 var Dog = function (options){
-  var options = options || {};
+  options = options || {};
   this.color = options.color;
   this.hungry = (options.hungry=== undefined) ? true : options.hungry;
   this.status = 'normal';
 };
 
 var Human = function (options){
-  var options = options || {};
+  options = options || {};
   this.cool = (options.cool=== undefined) ? false : options.cool;
   this.pet = function (target){
     this.status = 'happy';
@@ -62,7 +62,7 @@ var Human = function (options){
 
 
 // var Dog = function(options) {
-//   var options = options || {};
+//    options = options || {};
 //
 //   this.color = options.color;
 //
@@ -78,7 +78,7 @@ var Human = function (options){
 //
 //
 // var Human = function(options) {
-//   var options = options || {};
+//    options = options || {};
 //
 //   if(options.cool){
 //     this.cool = true;
