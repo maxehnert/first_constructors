@@ -35,39 +35,24 @@ function expect(target) {
 // \___/\____/_/ /_/____/\__/_/   \__,_/\___/\__/\____/_/  /____/
 //
 // Only add code to *THIS* section!
+//
+// // ????????
+// // ????????
+// // ????????
+//
 
-// ????????
-// ????????
-// ????????
-
-var Dog = function(options) {
+var Dog = function (options){
   var options = options || {};
-
   this.color = options.color;
-
-  if(options.hungry == false) {
-    this.hungry = options.hungry
-  }
-  else {
-    this.hungry = true;
-  }
-
-  this.status = options.status || 'normal';
+  this.hungry = (options.hungry=== undefined) ? true : options.hungry;
+  this.status = 'normal';
 };
 
-
-var Human = function(options) {
+var Human = function (options){
   var options = options || {};
-
-  if(options.cool){
-    this.cool = true;
-  }
-  else{
-    this.cool = false;
-  }
-
-  this.pet = function(dog){
-    dog.status = 'happy';
+  this.cool = (options.cool=== undefined) ? false : options.cool;
+  this.pet = function (target){
+    this.status = 'happy';
   };
 
   this.feed = function(dog){
@@ -76,6 +61,42 @@ var Human = function(options) {
 };
 
 
+// var Dog = function(options) {
+//   var options = options || {};
+//
+//   this.color = options.color;
+//
+//   if(options.hungry == false) {
+//     this.hungry = options.hungry
+//   }
+//   else {
+//     this.hungry = true;
+//   }
+//
+//   this.status = options.status || 'normal';
+// };
+//
+//
+// var Human = function(options) {
+//   var options = options || {};
+//
+//   if(options.cool){
+//     this.cool = true;
+//   }
+//   else{
+//     this.cool = false;
+//   }
+//
+//   this.pet = function(dog){
+//     dog.status = 'happy';
+//   };
+//
+//   this.feed = function(dog){
+//     dog.hungry = false;
+//   };
+// };
+//
+//
 
 
 
